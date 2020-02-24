@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Demo SoundCloud</string>
+    <string name="titre_de_la_chanson">Titre de la chanson</string>
+    <string name="artiste">Artiste</string>
+    <string name="time">3:05</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="ok">Ok</string>
+</resources>

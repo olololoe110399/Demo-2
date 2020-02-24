@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/pb_main_loader"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_above="@+id/ln">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:id="@+id/ln"
+        android:layout_above="@+id/toolbar"
+        android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" />
+    <include layout="@layout/toolbar" android:id="@+id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_search"
+        app:fabSize="normal"
+        app:layout_anchor="@id/recycler"/>
+
+</RelativeLayout>
